@@ -1,0 +1,224 @@
+:root {
+    --bg-color: #0c0c0c;
+    --text-color: #e0e0e0;
+    --prompt-color: #6a9fb5;
+    --response-color: #c0c0c0;
+    --error-color: #d48787;
+    --link-color: #6a9fb5;
+    --border-color: #3a3a3a;
+    --scrollbar-track: #1a1a1a;
+    --scrollbar-thumb: #444;
+    --scrollbar-thumb-hover: #555;
+}
+
+/* Тема light */
+body.theme-light {
+    --bg-color: #f5f5f5;
+    --text-color: #2d2d2d;
+    --prompt-color: #2c5f8a;
+    --response-color: #555555;
+    --error-color: #b33;
+    --link-color: #2c5f8a;
+    --border-color: #ddd;
+    --scrollbar-track: #e0e0e0;
+    --scrollbar-thumb: #bbb;
+    --scrollbar-thumb-hover: #999;
+}
+
+/* Тема blue-matrix */
+body.theme-blue-matrix {
+    --bg-color: #0a0f1a;
+    --text-color: #00ffcc;
+    --prompt-color: #00ffcc;
+    --response-color: #66ffcc;
+    --error-color: #ff6666;
+    --link-color: #00ffcc;
+    --border-color: #1a3a4a;
+    --scrollbar-track: #0a1a2a;
+    --scrollbar-thumb: #1a3a4a;
+    --scrollbar-thumb-hover: #2a5a6a;
+}
+
+/* Тема espresso */
+body.theme-espresso {
+    --bg-color: #2c2118;
+    --text-color: #d4b894;
+    --prompt-color: #c87e3a;
+    --response-color: #b89a6e;
+    --error-color: #c87e3a;
+    --link-color: #c87e3a;
+    --border-color: #4a3a2a;
+    --scrollbar-track: #2a1a10;
+    --scrollbar-thumb: #4a3a2a;
+    --scrollbar-thumb-hover: #6a5a4a;
+}
+
+/* Тема green-goblin */
+body.theme-green-goblin {
+    --bg-color: #0a1008;
+    --text-color: #00ff00;
+    --prompt-color: #00ff00;
+    --response-color: #33ff33;
+    --error-color: #ff3333;
+    --link-color: #00ff00;
+    --border-color: #1a3a1a;
+    --scrollbar-track: #0a1a0a;
+    --scrollbar-thumb: #1a3a1a;
+    --scrollbar-thumb-hover: #2a5a2a;
+}
+
+/* Тема ubuntu */
+body.theme-ubuntu {
+    --bg-color: #2e1114;
+    --text-color: #ddd6c6;
+    --prompt-color: #e95420;
+    --response-color: #aaa08a;
+    --error-color: #e95420;
+    --link-color: #e95420;
+    --border-color: #4a2a2a;
+    --scrollbar-track: #1a0a0a;
+    --scrollbar-thumb: #4a2a2a;
+    --scrollbar-thumb-hover: #6a4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Cascadia Code', 'Cascadia Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.terminal {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.output {
+    margin-bottom: 8px;
+}
+
+.input-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.prompt {
+    color: var(--prompt-color);
+    white-space: pre;
+}
+
+.command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Cascadia Code', 'Cascadia Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+    font-size: 15px;
+    color: var(--text-color);
+    padding: 0;
+    caret-color: var(--prompt-color);
+}
+
+.command-input:focus {
+    outline: none;
+}
+
+.command-block {
+    margin-bottom: 0;
+}
+
+.command-line-input {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.prompt-lambda {
+    color: var(--prompt-color);
+}
+
+.command-text {
+    color: var(--text-color);
+}
+
+.response-block {
+    margin-bottom: 8px;
+}
+
+.response-text {
+    color: var(--response-color);
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.response-text a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.response-text a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: var(--error-color);
+}
+
+/* neofetch pre */
+.neofetch-block pre {
+    color: var(--prompt-color);
+}
+
+/* Скроллбар */
+.output::-webkit-scrollbar {
+    width: 6px;
+}
+.output::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+.output::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 3px;
+}
+.output::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+    
+    .terminal {
+        font-size: 13px;
+    }
+    
+    .command-input {
+        font-size: 13px;
+    }
+    
+    .command-line-input {
+        flex-wrap: wrap;
+    }
+    
+    pre {
+        font-size: 9px;
+        overflow-x: auto;
+    }
+}

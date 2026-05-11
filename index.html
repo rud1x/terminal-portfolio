@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="rud1x — портфолио в стиле терминала">
+    <meta name="author" content="rud1x">
+    <title>rud1x@venom:~</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&gt;_</text></svg>">
+</head>
+<body>
+    <div class="terminal">
+        <div class="output" id="output"></div>
+        <div class="input-line">
+            <span class="prompt" id="prompt"></span>
+            <input type="text" id="command-input" class="command-input" autofocus spellcheck="false">
+        </div>
+    </div>
+
+    <script src="js/commands.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+</html>
