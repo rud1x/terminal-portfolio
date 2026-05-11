@@ -3,7 +3,7 @@
 **Терминал-портфолио разработчика.**  
 Проект, который превращает обычное портфолио в интерактивную консоль.
 
-🔗 **Демо:** [rud1x.github.io](https://rud1x.github.io)
+🔗 **Демо:** [rud1x.github.io/terminal-portfolio](https://rud1x.github.io/terminal-portfolio)
 
 ---
 
