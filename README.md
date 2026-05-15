@@ -37,16 +37,6 @@
 
 ---
 
-## 🛠️ Установка и запуск
-
-```bash
-git clone https://github.com/rud1x/rud1x.github.io.git
-cd rud1x.github.io
-# Открыть index.html в браузере
-```
-
----
-
 ## 🎨 Кастомизация
 
 Все данные находятся в `js/commands.js`:
@@ -62,7 +52,7 @@ cd rud1x.github.io
 ## 📁 Структура проекта
 
 ```
-rud1x.github.io/
+terminal-portfolio/
 ├── index.html
 ├── css/
 │   └── style.css
@@ -75,8 +65,7 @@ rud1x.github.io/
 
 ## 🐧 Вдохновение
 
-Проект вдохновлён [satnaing/terminal-portfolio](https://github.com/satnaing/terminal-portfolio) и оформлен в стиле **Arch Linux**.
-
+Проект вдохновлён [satnaing/terminal-portfolio](https://github.com/satnaing/terminal-portfolio)
 ---
 
 ## 📄 Лицензия
